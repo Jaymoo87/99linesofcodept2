@@ -1,7 +1,30 @@
-
+document.addEventListener('DOMContentLoaded', function(){
 const friends = ['Jamie', 'Jen', 'Sequoya', 'Jeff', 'Logan'];
 
 let button = document.getElementById('singbutton');
+document.body.appendChild(button)
+
+let Jamie = document.createElement('div')
+let Jen = document.createElement('div')
+let Sequoya = document.createElement('div')
+let Jeff = document.createElement('div')
+let Logan = document.createElement('div')
+
+ 
+Jamie.className = 'friend'
+Jen.className = 'friend' 
+Sequoya.className = 'friend'
+Jeff.className = 'friend'
+Logan.className = 'friend'
+
+
+document.body.appendChild(Jamie)
+document.body.appendChild(Jen)
+document.body.appendChild(Sequoya)
+document.body.appendChild(Jeff)
+document.body.appendChild(Logan)
+
+
 
 button.addEventListener('click', function(){
 
@@ -47,3 +70,4 @@ for (i = 0, a = 0; i == 0; ++a) {
 
 
 //lines();
+});
