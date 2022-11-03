@@ -1,10 +1,13 @@
 
 const friends = ['Jamie', 'Jen', 'Sequoya', 'Jeff', 'Logan'];
 
+let button = document.getElementById('singbutton');
 
-function lines() {
-    let lastLine;
-    let lastWords;
+button.addEventListener('click', function(){
+
+    
+    let  lastLine;
+    let  lastWords;
 
 
 for (i = 0, a = 0; i == 0; ++a) {
@@ -40,8 +43,7 @@ for (i = 0, a = 0; i == 0; ++a) {
 
 
 }
-}
+});
 
 
-
-lines();
+//lines();
