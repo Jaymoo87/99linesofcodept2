@@ -1,5 +1,7 @@
 body {
-    background-color: rgb(4, 53, 53);
+    background-color: rgb(196, 18, 136);
+    text-align: center;
+    
 }
 
 h1{
@@ -8,8 +10,9 @@ h1{
 }
 
 .friend {
-    background-color: rgb(43, 43, 8);
-    margin: 5em;
+    background-color: rgb(27, 114, 172);
+    margin-left: 5em;
+    margin-right: 5em;
 }
 
 h3 {
@@ -21,3 +24,4 @@ p {
 
     text-align: center;
 }
+
