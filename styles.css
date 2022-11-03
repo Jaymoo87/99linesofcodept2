@@ -15,4 +15,9 @@ h1{
 h3 {
     text-transform: uppercase;
     text-align: center;
+    text-decoration: underline;
+}
+p {
+
+    text-align: center;
 }

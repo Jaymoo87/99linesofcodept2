@@ -1,95 +1,55 @@
-document.addEventListener('DOMContentLoaded', function(){
-const friends = ['Jamie', 'Jen', 'Sequoya', 'Jeff', 'Logan'];
+document.addEventListener('DOMContentLoaded', function () {
 
-let button = document.getElementById('singbutton');
-document.body.appendChild(button);
-
-let Jamie = document.createElement('div');
-let Jen = document.createElement('div');
-let Sequoya = document.createElement('div');
-let Jeff = document.createElement('div');
-let Logan = document.createElement('div');
-
- 
-Jamie.className = 'friend';
-Jen.className = 'friend';
-Sequoya.className = 'friend';
-Jeff.className = 'friend';
-Logan.className = 'friend';
-
-
-document.body.appendChild(Jamie);
-document.body.appendChild(Jen);
-document.body.appendChild(Sequoya);
-document.body.appendChild(Jeff);
-document.body.appendChild(Logan);
-
-let h3 = document.createElement('h3');
-
-let Jamieh3 = document.createElement('h3');
-Jamieh3.textContent = 'Jamie';
-Jamie.appendChild(Jamieh3);
-
-let Jenh3 = document.createElement('h3');
-Jenh3.textContent = 'Jen';
-Jen.appendChild(Jenh3);
-
-let Sequoyah3 = document.createElement('h3');
-Sequoyah3.textContent = 'Sequoya';
-Sequoya.appendChild(Sequoyah3);
-
-let Jeffh3 = document.createElement('h3');
-Jeffh3.textContent = 'Jeff';
-Jeff.appendChild(Jeffh3);
-
-let Loganh3 = document.createElement('h3');
-Loganh3.textContent = 'Logan';
-Logan.appendChild(Loganh3);
+    let button = document.getElementById('singbutton');
+    document.body.appendChild(button);
 
 
 
-button.addEventListener('click', function(){
+    const friends = ['Jamie', 'Jen', 'Sequoya', 'Jeff', 'Logan'];
 
-    
-    let  lastLine;
-    let  lastWords;
+    button.addEventListener('click', function () {
+
+        for (let i = 0; i < friends.length; i++) {
+            //create div and give it a class
+            let div = document.createElement("div");
+            div.className = "friend";
+            // create h3 and give it the text from the friend array
+            // put the h3 in the div
+            let h3 = document.createElement("h3");
+
+            //cycles through the 'friends' array (remember this...Justin)
+            let name = document.createTextNode(friends[i]);
+            //place the name into the h3 and the h3 into its own div
+            h3.appendChild(name);
+            div.appendChild(h3);
+
+            for (let j = 99; j > 0; j--) {
+
+                let p = document.createElement("p");
+                let song;
+
+                if (j > 2) {
+                    song = document.createTextNode(j + " lines of code in the file, " + j + " lines of code; " + friends[i] + " strikes one out, clears it all out, " + (j - 1) + " lines of code in the file");
+                } else if (j === 2) {
+                    song = document.createTextNode(j + " lines of code in the file, " + j + " lines of code; " + friends[i] + " strikes one out, clears it all out, " + (j - 1) + " line of code in the file");
+                } else {
+                    song = document.createTextNode(j + " line of code in the file, " + j + " line of code; " + friends[i] + " strikes one out, clears it all out, no more lines of code in the file");
+                }
+
+                //text in paragraphs --> paragraphs in divs
+                p.appendChild(song);
+                div.appendChild(p);
 
 
-for (i = 0, a = 0; i == 0; ++a) {
-    if (a == friends.length) {
-        break;
-    }
-    else {
-        console.log(friends[a] + ":");
+            };
+            
+            //put div in body
+            document.body.appendChild(div);
 
 
 
-        for (i = 99; i >= 1; --i) {
-
-
-            if (i === 1) {
-
-                lastLine = "line of code";
-                lastWords = "no more lines of code in the file "
-                console.log(i + " lines of code in the file, " + ' ' + i + " line of code; " + friends[a] + " strikes one out, clears it all out," + ' ' + lastWords);
-
-            } else {
-
-
-                lastLine = "lines of code";
-                lastWords = i - 1 + ' ' + "lines of code in the file";
-                console.log(i + ' ' + "lines of code in the file," + ' ' + i + " lines of code;" + ' ' + friends[a] + ' ' + " strikes one out, clears it all out," + ' ' + lastWords);
-
-            }
         }
+    });
 
-
-    }
-
-
-}
 });
 
-
-//lines();
-});
